@@ -1,0 +1,57 @@
+/*CSS style for lion website*/
+
+/*rule will set global styles such as system font, default background color and text, and center align*/
+body {
+    color: #1D1209;
+    background-color: #E7E3DA;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+/*rule sets a dark brown background color and margin to header*/
+header {
+    background-color: #1D1209;
+    margin: 0 auto;
+}
+/*rule adds background color, text color, and font styling to elements in nav bar*/
+nav {
+    color: #8a2be2;
+    background-color: #f5efc1;
+    text-align: left;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*rule will make main section a box with following properties*/
+main {
+    width: 69%;
+    background-color: #906851;
+    margin: 0 auto;
+    padding: 1px 7px;
+    font-size: 1.5rem;
+}
+/*rule will alter h1 text to be white, bold, Times New Roman, and largest text*/
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*rule will make paragraph text the selected color, align text left, and set font size*/
+p {
+    color: #1D1209;
+    text-align: left;
+    font-size: 1rem;
+}
+/*rule will center and fit image along with a brown border*/
+img{
+    border: 3px solid #40281D;
+    text-align: center;
+    display: block; 
+    margin: 0 auto;
+    width: 70%;
+}
+/*rule will target text of intro paragraphs to have slightly larger text and darker text color*/
+.intro{
+    font-size: 18px;
+    color: #060201;
+}
