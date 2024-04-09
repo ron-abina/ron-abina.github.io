@@ -1,0 +1,93 @@
+/*CSS style for lion website*/
+
+/*rule will set global styles such as system font and center align*/
+body {
+    color: #1D1209;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+/*rule sets background color and fixed width for container*/
+#container {
+    width: 1000px;
+	/* padding: 10px; */
+	background-color: #E7E3DA;
+	margin: 0 auto;/*center container in browser*/
+}
+/*rule sets fixed sizing to header*/
+header {
+    width: 980px;
+	height: 100px;
+	padding: 10px;
+    background-color: #1D1209;
+}
+
+/******************nav starts********************/
+/*rule sets sizing and background color to nav bar*/
+nav ul{
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+    background-color: #f5efc1;
+}
+/*rule sets nav items to inline*/
+nav li{
+	display: inline-block;
+	margin: 0;
+}
+/*rule sets padding and font styling/ color of nav items*/
+nav a:link, a:visited{
+	display: block;
+	width: 100%;
+	color: #8a2be2;
+	padding: 5px 30px;
+    text-decoration: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*rule sets color of text when hovered over*/
+nav a:hover{
+	color: gray;
+}
+/***************************nav ends**************************************/
+
+/*rule will make main section a box with following properties*/
+main {
+    width: 980px;
+	padding: 20px 10px;
+    background-color: #906851;
+    font-size: 1.5rem;
+}
+/*rule will float image right*/
+figure{
+	float: right;
+	margin: 0 10px;
+}
+/*rule sizes image and adds colored border*/
+figure img{
+	border: 3px solid #40281D;
+    width: 300px;
+    height: 300px;
+}
+
+/*rule will alter h1 text to be white, bold, Times New Roman, and largest text*/
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*rule will make paragraph text the selected color and set font size*/
+p {
+    color: #1D1209;
+}
+/*rule centers footer in browser and adds background color*/
+footer{
+	width: 980px;
+	padding: 20px 10px;
+	background-color: black;
+	text-align: center;
+    margin: 0 auto;
+}
+/*rule sets footer text white for visibility against background color*/
+footer p {
+    color: white;
+}
