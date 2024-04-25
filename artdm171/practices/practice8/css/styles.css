@@ -1,0 +1,207 @@
+/*
+Author: Ron Abina
+Date: 24 April 2024
+File Name: styles.css for Practice 8
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, section, aside, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #F2F2F2;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rule for box sizing applies to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/**************** Style rules for mobile viewport*****************/
+
+/* Style rule to hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+/* Style rules for header content */
+header {
+    text-align: center;
+    background-color: #BFA288;
+    color: #0D0903;
+}
+
+header h1 {
+    font-size: 2.3em;
+    padding-top: 2%;
+    font-family: "Zen Tokyo Zoo", system-ui;
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: #40271E;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    font-size: 1.3em;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    border-top: 1px solid #E7E3DA;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+    background-color: #F2F2F2;
+    overflow: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+main h2 {
+    color: #734A3C;
+}
+
+main p {
+    font-size: 1.1em;
+}
+
+figure{
+	position:relative;
+	max-width:275px;
+	margin: 2% auto;
+	border: 3px solid #40281D;
+}
+
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    clear: left;
+    background-color: #40281D;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px), print{
+ 
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+    
+    nav li a {
+        padding: 0.5em;
+    }
+    
+	.grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1024px), print {
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    nav li {
+        display: inline-block;
+        font-size: 1.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+
+    nav li a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 0.5em;
+        text-decoration: none;
+    }
+    
+    nav li a:link {
+        color: #fff;
+    }
+    
+    nav li a:hover {
+        color: #BFA288
+    }
+    
+    
+    nav li a:active {
+        color: #8C6751
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: min-content 1fr;
+        grid-template-areas: 
+            "h h"
+            "i f"
+            "p p"
+            "p p"
+    }
+
+    h2 {
+        grid-area: h;
+        grid-row: 1 / 2;
+    }
+    .intro {
+        grid-area: i;
+        grid-row: 2 / 3;
+        margin-top: 5%;
+        font-size: 1.2em;
+    }
+    figure {
+        grid-area: f;
+        grid-row: 2 / 3;
+    }
+
+    p {
+        grid-column: 1 / span 2;
+    }
+}
