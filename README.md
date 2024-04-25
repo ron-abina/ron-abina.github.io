@@ -1,3 +1,3 @@
 # ron-abina.github.io
-For ARTDM171
-Hello
+[Portfolio currently updating materials]
+[Contains material from ARTDM171 at Diablo Valley College]
