@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+Student Name: Ron Abina
+Assignment Name: Project 2
+
+--> 
+
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/huz5ztr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!-- Use the header area for website logo, page name, and hero image -->
+        <header>
+            <h2>Welcome to</h2>
+            <h1>Forward Fitness</h1>
+                <!-- Hero Image -->
+            <div id="hero">
+                <img src="../images/home/home-hero.jpg" alt="intersecting pattern of neon green wavelengths" class="img-responsive">
+            </div>
+        </header>
+
+        <!-- Use the nav area to add hyperlinks to other pages within the website -->
+        <nav>
+            <a href="index.html" class="active">
+                <img src="../images/forward-fitness-logo.png" alt="logo of Forward Fitness" class="img-responsive">
+            </a>
+            <div id="nav-links" class="show">
+                <ul>
+                    <li><a href="index.html" title="links to home page of Forward Fitness">Home</a></li>
+                    <li><a href="about-us.html" title="links to About Us page of Forward Fitness">About Us</a></li>
+                    <li><a href="classes.html" title="links to Classes page of Forward Fitness">Classes</a></li>
+                    <li><a href="nutrition.html" title="links to Nutrition page of Forward Fitness">Nutrition</a></li>
+                    <li><a href="contact-us.html" title="links to Contact Us page of Forward Fitness">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="mobile-menu">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("nav-links");
+                    if (window.innerWidth < 1024) {
+                        if (x.style.display === "none") {
+                        x.style.display = "block";
+                        } else {
+                        x.style.display = "none";
+                        }
+                    } else if (window.innerWidth >= 1024){
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
+        </nav>
+
+        <!-- Use the main section to add the main content of the webpage -->
+        <section id="contact-main">
+            <div id="top-text">
+                <h2>Ready to get started? Contact us today.</h2>
+                <h3>(814) 555-9608</h3>
+                <h3>Email us: forwardfitness@club.net</h3>
+            </div>
+
+
+            <h3>You can also contact us via the following form:</h3>
+            <div id= "customer-info">
+                
+                <div id="name-row">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name...">
+                </div>
+                <div id="email-row">
+                        <label for="email">Email Address:</label>
+                        <input type="text" id="email" name="email" placeholder="email@address.com...">
+                </div>
+                <div id="message-row">
+                    <label for="message">Questions or comments? Leave a message here:</label>
+                    <input type="text" id="message" name="message" placeholder="Write your message here...">
+                </div>
+            </div>
+            <div id="visit">
+                <p>Visit us at: 1275 Channel Center Street, Boston, MA 02210</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.8517572084897!2d-71.05362748503984!3d42.34568384400281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a7dc2b67e7b%3A0x36ec93427cd9c5f1!2sChannel+Center+St%2C+Boston%2C+MA+02210!5e0!3m2!1sen!2sus!4v1558137213400!5m2!1sen!2sus" class="map"></iframe>
+            </div>
+        </section>
+        <footer>
+            <p>
+                &copy; Copyright 2024
+            </p>
+            <p>
+                <em>"This fictitious website was created as an academic exercise for the Diablo Valley College course, ARTDM-171:Web Design I. In no way should this content be considered or used as a source of factual public information."</em>
+            </p>
+        </footer>
+    </div>
+</body>

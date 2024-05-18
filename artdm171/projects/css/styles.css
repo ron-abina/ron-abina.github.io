@@ -1,0 +1,1084 @@
+/*
+Author: Ron Abina
+File Name: styles.css for Project 2 - CSS Development
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h2, h3, h4, h5 ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Global style rules for body and images */
+body {
+    background-color: #000000;
+    color: #E6E7E8;
+}
+
+h1 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h3, h4 , h5, thead th {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p, li, tbody td, label, input {
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+  }
+
+/**************** Style rules for mobile viewport*****************/
+
+/* Style rule to hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+button {
+    color:#58595B; 
+    background-color: #FBFF12;
+    border-radius: 4px;
+    padding: 15px;
+    border: none;
+}
+
+button:hover{
+    color:#58595B;
+    background-color: #FF715B;
+    border: #FBFF12;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 7px 5px 0 #BCED09;
+}
+
+/* Style rules for header content */
+header {
+    position: relative;
+    text-align: center;
+    color: #E6E7E8;
+}
+
+header h1 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header h2 {
+    z-index: 2;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+header img{
+    z-index: 1;
+    opacity: 0.5;
+    max-height: 30%;
+    max-width: 100%;
+    overflow: hidden;
+}
+#hero {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Style rules for navigation area */
+nav {
+    z-index: 3;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: rgba(0,0,0);
+}
+nav img {
+    display: block;
+    opacity: 75%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    height: 5em;
+    padding: 0%;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    font-size: 1.3em;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    border-top: 1px solid #E7E3DA;
+}
+
+nav li:first-child{
+    border-top: none;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+#nav-links{
+    display: none;
+}
+
+nav a.icon {
+    display: block;
+    color:#E6E7E8;
+    position: absolute;
+    font-size: 2em;
+    right: 10%;
+    top: 35%;
+}
+
+nav a:hover {
+    color:#FBFF12;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #E6E7E8;
+    background-color: #58595B;
+}
+
+
+
+
+/* Style rules for main content (home page) */
+    #main {
+        color: #E6E7E8;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    /* Set specific text styles for home page */
+    #main p {
+        font-size: 0.75rem;
+    }
+
+    #main h2 {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3rem;
+    }
+
+    #main h3 {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.25rem;
+    }
+
+    /* Home page main content styled in thirds with each section using grid or flexbox*/
+    #mission {
+        background-color: #000000;
+        height: 20em;
+        position: relative;
+        z-index: 1;
+    }
+    /*HTML image hidden; hackground image used to overlay color on image*/
+    #mission img {
+        display:none;
+    }
+    #mission-image {
+        background-image: url(../images/home/gym-mission.jpeg);
+        height: 20em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 30%;
+        opacity: 50%;
+        z-index: 2;
+    }
+
+    #mission-text{
+        background-color: rgba(88, 89, 91, .9);
+        position: absolute;
+        right: 0;
+        margin: 10%;
+        height:fit-content;
+        width: 50%;
+        z-index: 3;
+    }
+    #mission-text button{
+        margin: 5% 0;
+    }
+    #facility {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        height: 20em;
+        background-color: #000000;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 40% auto;
+        grid-template-areas: 
+            "t i"
+    }
+    #facility-text {
+        padding-top: 20%;
+        background-color: #58595B;
+        height: 20em;
+        grid-area: t;
+        z-index: 3;
+    }
+    #facility-image {
+        grid-area: i;
+        height: 20em;
+        background-image: url(../images/home/gym-facility.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center right;
+        opacity: 0.4;
+        z-index: 2;
+    }
+
+    #facility h2 {
+        z-index: 3;
+        font-size: 1.5em;
+        color:#E6E7E8;
+        position: absolute;
+        top: 45%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    #facility h3{
+        font-size: 0.9em;
+        padding-left: 4%;
+        margin: 0;
+        text-align: left;
+    }
+
+    #facility img {
+        display:none;
+    }
+    #facility ul {
+        margin: 0;
+        list-style-position: inside;
+    }
+
+    #facility li {
+        margin: 0;
+        font-size: 0.8em;
+        padding-left: 6%;
+        text-align: left;
+    }
+
+    #facility li::marker {
+        color: #FF715B;
+    }
+
+    #categories {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #categories img {
+        padding-left: 2%;
+        opacity: 0.25;
+        border-radius: 10%;
+        margin: 0;
+    }
+
+    #categories h3 {
+        position: absolute;
+        left: 40%;
+        color:#E6E7E8;
+        transform: translate(0, -600%);
+    }
+
+    #promotion {
+        text-align: center;
+        background-color: #FBFF12;
+        color: #58595B;
+        padding: 1%;
+    }
+
+    #promotion strong {
+        color:#FF715B;
+    }
+    #promotion a {
+        color: #FF715B;
+    }
+
+
+
+
+
+/* Style rules for main content (About Us page) */
+    #about-main {
+        background-color: #58595B;
+    }
+    #about-main h3 {
+        font-size: 1.2rem;
+    }
+    #about-main p {
+        font-size: 0.8rem;
+    }
+    #about-main li {
+        text-align: left;
+        font-size: 1rem;
+        list-style-position: inside;
+    }
+    #weights {
+        border-top: 3px solid #BCED09;
+        border-bottom: 1px solid #E6E7E8;
+    }
+    #weights, #personal {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        background-color: #000000;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 65% auto;
+        grid-template-areas: 
+            "i t";
+    }
+    #weight-image {
+        grid-area: i;
+        background-image: url(../images/about-us/weights.jpg);
+        height: 10em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 10%;
+    }
+    #weight-text, #personal-text, #cardio-text {
+        background-color: #58595B;
+        height: 10em;
+    }
+    #weights img, #cardio img, #personal img{
+        display:none;
+    }
+    #weights p, #personal p {
+        z-index: 3;
+        position: absolute;
+        width: 250px;
+        top: 45%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+    #cardio {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        background-color: #000000;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 65%;
+        grid-template-areas: 
+            "t i";
+    }
+    #cardio-image {
+        grid-area: i;
+        background-image: url(../images/about-us/cardio.jpg);
+        height: 10em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 10%;
+    }
+    #cardio p{
+        z-index: 3;
+        position: absolute;
+        width: 250px;
+        top: 45%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+    }
+    #personal {
+        border-top: 1px solid #E6E7E8;
+        border-bottom: 3px solid #BCED09;
+    }
+    #personal-image {
+        grid-area: i;
+        background-image: url(../images/about-us/personal-training.jpg);
+        height: 10em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 10%;
+    }
+    #common-head {
+        padding: 1% 5%;
+        background-color: #E6E7E8;
+        color: #58595B;
+        text-align: center;
+    }
+    #common-head p{
+        text-align: center;
+    }
+    #common-body {
+        background-color: #000000;
+        position: relative;
+        z-index: 1;
+    }
+    #common-text {
+        position: absolute;
+        text-align: left;
+        padding: 10%;
+        color:#E6E7E8;
+        z-index: 3;
+    }
+    #common-text p{
+        text-align: left;
+        font-size: 0.9em;
+    }
+    #common-text h3 {
+        text-align: left;
+        font-size: 1.4em;
+    }
+    #common-text a {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: #E6E7E8;
+        padding-top: 5%;
+        text-decoration: underline #FBFF12;
+        font-size: 0.8rem;
+    }
+    #common-image {
+        z-index: 2;
+        background-image: url(../images/about-us/common-image.jpeg);
+        opacity: 10%;
+        height: 500px; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+    }
+
+
+
+
+
+/* Style rules for Classes page content */
+    table {
+        text-align: center;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid #BCED09;
+    }
+
+    thead {
+        background-color: #BCED09;
+        color:#58595B;
+        font-weight: 900;
+    }
+
+    th, td {
+    padding: 20px;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #58595B;
+    }
+
+    tbody tr:nth-child(even) {
+        color: #E6E7E8;
+    }
+
+
+
+
+
+/* Style rules for main content (Nutrition page) */
+    #nutrition-main {
+        background-color: #58595B;
+        color:#E6E7E8;
+    }
+    #nutrition-main img {
+        float: left;
+        height: 200px;
+        text-align: center;
+        padding: 5%;
+    }
+    #nutrition-main li {
+        font-size: 0.85em;
+        list-style-position: inside;
+    }
+
+    #thought, #guide, #meal {
+        padding: 2%;
+    }
+    #thought {
+        background-color: #E6E7E8;
+        color:#58595B;
+    }
+    #thought a {
+        color:#FF715B;
+    }
+    #guide {
+        border-bottom: 1px dashed #E6E7E8;
+    }
+    #meal {
+        background-color: #58595B;
+    }
+    #meal-text {
+        text-align: right;
+    }
+    #meal h2, h3 {
+        text-align: center;
+    }
+    #meal a {
+        color:#E6E7E8;
+        text-decoration: underline #FF715B;
+    }
+
+
+
+
+
+/* Style rules for Contact Us page content */
+    #contact-main {
+        text-align: center;
+        padding: 4%;
+    }
+    #top-text {
+        margin-bottom: 5%;
+    }
+    #customer-info {
+        background-color: #E6E7E8;
+        color: #58595B;
+        text-align: left;
+        margin-top: 2%;
+        padding: 2%;
+        line-height: 32px;
+    }
+    #input {
+        padding-right: 10%;
+        border: #BCED09;
+    }
+    #message {
+        margin: 3%;
+        width: 80%;
+        padding-bottom: 10%
+    }
+    #visit {
+        text-align: center;
+    }
+
+
+
+/**************** Style rules for tablet viewport*****************/
+@media screen and (min-width: 620px), print{
+ 
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+    
+    nav li a {
+        padding: 0.5em;
+    }
+    
+	.grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+}
+
+/**************** Style rules for desktop viewport*****************/
+@media screen and (min-width: 1024px), print {
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Adjusts header/ nav bar so that both are visible always visible at top of page */
+    header {
+        max-height: 30%;
+        overflow: hidden;
+    }
+
+    header img{
+        float: right;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        max-height: 30%;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    header h1 {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    header h2 {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        transform: translate(-25%, -50%);
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+    nav {
+        display: inline;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0 auto;
+        height: 100px;
+        width: 100%;
+        background-color: rgba(0,0,0,0);
+    }
+
+    nav img {
+        position: relative;
+        padding-left: 2%;
+        top: 15%;
+        float: left;
+    }
+    #nav-links {
+        display: block;
+    }
+
+    nav ul {
+        float: right;
+    }
+
+    nav li {
+        position: relative;
+        /* top: 50%;
+        transform: translateY(25%); */
+        float: left;
+        font-size: 1em;
+    }
+
+    nav li a {
+        display: block;
+        color: #fff;
+        padding: 0.5em;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color:#FBFF12;
+    }
+    
+    
+    nav li a:active {
+        color: #FF715B
+    }
+
+
+    /* Style rules for Home Page */
+    #main h2 {
+        font-size: 3rem;
+    }
+    #main h3 {
+        font-size: 1.5rem;
+    }
+    /* Uses grid to format Main content into 4 rows */
+    #main {
+        display: grid;
+        /* grid-template-rows: 4.5% auto auto auto auto; */
+        grid-template-areas: 
+            "p p p"
+            "m m m"
+            "f f f"
+            "c c c";
+    }
+    /* Promotion banner is displayed at top of main content */
+    #promotion {
+        grid-column: 1 / span 3;
+        grid-area: p;
+        grid-row: 1 / 2;
+        text-align: center;
+        padding: 0;
+        padding-bottom: 1%;
+        height: fit-content;
+    }
+    #promotion p {
+        font-size: 0.9em;
+        margin-bottom: 0;
+        line-height: 0.1em;
+        text-align: center;
+    }
+
+    #mission {
+        background: linear-gradient(to bottom right, #58595B, #BCED09);
+        grid-area: m;
+        grid-column: 1 / span 3;
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-template-areas: 
+            "t i";
+    }
+    #mission-image {
+        grid-area: i;
+        background: #58595B;
+        background-image: url(../images/home/gym-mission.jpeg);
+        background-image: url(../images/home/gym-mission.jpeg), linear-gradient(to bottom right, #58595B, #BCED09);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% center;
+        height: 20em;
+    }
+    #mission-text {
+        padding: 0 10%;
+        padding-top: 10%;
+        margin:0;
+        height: 100%;
+        width: 100%;
+        grid-area: t;
+    }
+    #mission p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    #mission h3 {
+        font-size: 1.8em;
+    }
+    
+    #facility {
+        grid-area: f;
+        grid-column: 1 / span 3;
+        grid-row: 3 / 4;
+        grid-template-columns: 70% auto;
+        background-color: #000000;
+        padding:0;
+        margin: 0;
+    }
+    #facility-text {
+        grid-area: f;
+        position: absolute;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        transform: translate(-40%, -10%);
+        height:fit-content;
+        width:20rem;
+        background-color: rgba(88, 89, 91, 0.9);
+        z-index: 3;
+    }
+    #facility-image {
+        grid-area: f;
+        grid-row: 3 / 4;
+        grid-column: 1 / span 3;
+        position: initial;
+        margin: 0;
+    }
+    #facility h2 {
+        background-color: rgba(0, 0, 0, 0.4);
+        font-size: 1.8em;
+        left: 30%;
+        z-index: 3;
+    }
+    #facility li {
+        font-size: 0.9rem;
+    }
+    /*Reset categories style at Desktop*/
+    #categories {
+        display: none;
+        position: initial;
+    }
+    /*Categories style set to an inline row style*/
+    #categories {
+        display: grid;
+        grid-area: c;
+        padding: 1%;
+        grid-column: 1 / span 3;
+        /* grid-row: 4 / 5; */
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #categories img {
+        width: 100%;
+        height: 240px;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    #categories h3 {
+        position: initial;
+        padding: 0;
+        margin-top: 10%;
+    }
+    #categories a{
+        color:#FBFF12;
+        padding: 5%;
+        margin: 0;
+    }
+    #categories a:hover {
+        color: #FF715B;
+    }
+
+
+
+    /*Style rules for About Us page*/
+    #about-grid {
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "1 2 3";
+        border-bottom: 5px solid #58595B;
+    }
+    #about-grid p {
+        font-size: 1rem;
+        transform: none;
+        top: 45%;
+        left: 20%;
+        text-align: left;
+    }
+    #about-grid h3 {
+        font-size: 1.5rem;
+    }
+    /*First section combined to #about-grid to display three columns in one row*/
+    #weight-image, #cardio-image, #personal-image {
+        grid-column: 1/ span 2;
+        height: 500px;
+    }
+    #weights {
+        grid-area: 1;
+    }
+    #weights, #cardio, #personal {
+        border: 3px solid #58595B;
+        border-bottom: 1px;
+    }
+    #weight-text, #cardio-text, #personal-text {
+        z-index: 3;
+        width: 100%;
+        position: absolute;
+        top:0;
+    }
+    #weight-text {
+        background: linear-gradient(45deg, rgba(188, 237, 9, .3), #58595B);
+    }
+    #cardio-text {
+        background: radial-gradient(circle at center, rgba(188, 237, 9, .3), #58595B)
+    }
+    #personal-text {
+        background: linear-gradient(90deg,#58595B, rgba(188, 237, 9, .3));
+    }
+    #common-head p {
+        font-size: 0.875rem;
+    }
+
+
+    /* Style rules for main content (nutrition page) */
+    #nutrition-main {
+        display: grid;
+        grid-template-areas: 
+            "1 1 1"
+            "2 2 2"
+            "3 3 3"
+    }
+    /*Text resized to read better */
+    #nutrition-main h5 {
+        font-size: 1.3rem;
+    }
+    #nutrition-main h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #nutrition-main p {
+        font-size: 1rem;
+    }
+
+    #nutrition-main img {
+        float: none;
+        width: 80%;
+        text-align: center;
+        padding: 5%;
+    }
+    /*Sections are fit into the grid display set by the main container*/
+    #thought {
+        background-color: #E6E7E8;
+        color:#58595B;
+        display: grid;
+        grid-area: 1;
+        grid-column: 1 / span 3;
+        grid-template-columns: 40% auto;
+        grid-template-areas: 
+            "x x x"
+            "y z z"
+    }
+    #thought h3 {
+        grid-column: 1 / span 3;
+        grid-area: x;
+    }
+    #thought img {
+        grid-area: y;
+    }
+    #thought-text {
+        font-size: 0.85em;
+        grid-area: z;
+    }
+
+    #guide {
+        display: grid;
+        align-items: center;
+        grid-area: 2;
+        grid-column: 1 / span 3;
+        grid-template-columns: auto 40%;
+        grid-template-areas: 
+            "x x x"
+            "a a b"
+    }
+    #guide h3 {
+        grid-area: x;
+        grid-column: 1 / span 3;
+    }
+    #guide p {
+        text-align: left;
+    }
+    #guide-text {
+        text-align: left;
+        grid-area: a;
+        grid-column: 1 / span 2;
+    }
+    #guide ul {
+        display: block;
+        list-style-position: inside;
+    }
+    #guide li {
+        font-size: 0.9em;
+        text-align: left;
+    }
+    #guide li::marker {
+        color: #FF715B;
+    }
+    #guide img {
+        width: 100%;
+        grid-area: b;
+    }
+
+    #meal {
+        display: grid;
+        position: relative;
+        justify-content: center;
+        grid-area: 3;
+        grid-column: 1 / span 3;
+        grid-template-columns: 40% auto;
+        grid-template-areas: 
+            "h h h"
+            "i i n"
+    }
+
+    #meal li{
+        font-size: 1em;
+    }
+    #meal h2 {
+        grid-area: h;
+        grid-column: 1 / span 3;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+    #meal img {
+        grid-area: i;
+        grid-row: 2 / 3;
+        grid-column: 1 / span 2;
+        padding-top: 10%;
+        padding-left: 20%;
+        width: 400px;
+        height: 300px
+    }
+    #meal h3 {
+        grid-area: i;
+        grid-row: 2 / 3;
+        grid-column: 1 / span 2;
+    }
+    #meal-text {
+        grid-area: n;
+        grid-row: 2 / 3;
+        list-style-position: inside;
+        text-align: right;
+    }
+
+
+
+    /*Style rules for the Contact Us page*/
+    /*Padding resizing and text centering targeted to fit Desktop*/
+    #input {
+        padding-right: 0;
+    }
+    #customer-info {
+        width: 60%;
+        text-align: center;
+        line-height: 32px;
+        margin-left: 20%;
+        border-radius: 4px;
+    }
+
+    #message-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #message {
+        width: 100%;
+        margin: 0;
+        padding:0;
+        padding-bottom: 6%;
+    }
+    #visit p{
+        text-align: center;
+        padding-top: 3%;
+        font-size: 1rem;
+    }
+    .map {
+        width: 30em;
+        height: 15em;
+    }
+}

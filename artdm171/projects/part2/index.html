@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+Student Name: Ron Abina
+Assignment Name: Project 2
+
+--> 
+
+<head>
+	<title>Forward Fitness</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/huz5ztr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- Use the header area for website logo, page name, and hero image -->
+        <header>
+            <div class="hero-text">
+                <h2>Welcome to</h2>
+                <h1>Forward Fitness</h1>
+            </div>
+                <!-- Hero Image -->
+            <div id="hero">
+                <img src="../images/home/home-hero.jpg" alt="intersecting pattern of neon green wavelengths" class="img-responsive">
+            </div>
+        </header>
+        <!-- Use the nav area to add hyperlinks to other pages within the website -->
+        <nav>
+            <a href="index.html" class="active">
+                <img src="../images/forward-fitness-logo.png" alt="logo of Forward Fitness" class="img-responsive">
+            </a>
+            <div id="nav-links" class="show">
+                <ul>
+                    <li><a href="index.html" title="links to home page of Forward Fitness">Home</a></li>
+                    <li><a href="about-us.html" title="links to About Us page of Forward Fitness">About Us</a></li>
+                    <li><a href="classes.html" title="links to Classes page of Forward Fitness">Classes</a></li>
+                    <li><a href="nutrition.html" title="links to Nutrition page of Forward Fitness">Nutrition</a></li>
+                    <li><a href="contact-us.html" title="links to Contact Us page of Forward Fitness">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="mobile-menu">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("nav-links");
+                    if (window.innerWidth < 1024) {
+                        if (x.style.display === "none") {
+                        x.style.display = "block";
+                        } else {
+                        x.style.display = "none";
+                        }
+                    } else if (window.innerWidth >= 1024){
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
+        </nav>
+        <!-- Use the main section to add the main content of the webpage -->
+        <section id="main">
+
+            <!-- Use the mission section to add "Our Mission" content -->
+            <div id ="mission">
+                <!-- Use section-text class to group text for section specific styling -->
+                <div id="mission-text">
+                    <h3>Our mission</h3>
+                    <p>is to help our clients meet their fitness and nutrition goals.</p>
+                    <p>If you have struggled with getting healthy and need the motivation and resources to make a healthy lifestyle change,</p>
+                    <a href="contact-us.html" title="links to Contact Us page of Forward Fitness"><button>Contact us today</button></a>
+                </div>
+                <div id="mission-image">
+                    <img src="../images/home/gym-mission.jpeg" alt="woman with a set of weights" class="img-responsive">
+                </div>
+            </div>
+
+            <!-- Use the facility section to add "Our Facility" content -->
+            <div id ="facility" class="facility-image">
+                <h2>Our Facility</h2>
+                <!-- Use facility-text class to group text for section specific styling -->
+                <div id="facility-text">
+                    <h3>includes...</h3>
+                    <ul>
+                        <li>state-of-the-art equipment</li>
+                        <li>convenient group training classes</li>
+                        <li>AND nutrition tips and information</li>
+                    </ul>
+                    <h3>to keep YOU healthy</h3>
+                </div>
+                <div id="facility-image">
+                    <img src="../images/home/gym-facility.jpeg" alt="wide shot of gym floor and equipment">
+                </div>
+            </div>
+
+            <!-- Use the promotions section to add a promotion banner to the website page -->
+            <div id="promotion">
+                <p>We provide a <strong>FREE, one-week membership</strong> to experience the benefits of our equipment and facility.</p>
+                <p>This one-week trial gives you complete access to our equipment, training classes, and nutrition planning.</p> 
+                <a href="contact-us.html" title="links to Contact Us page of Forward Fitness">
+                    <p>Contact us today to start your free trial!</p>
+                </a>
+            </div>
+
+            <!-- Use the categories section to add links (in the form of images and text) to website pages -->
+            <div id ="categories">
+                <a href="classes.html" title="links to Classes page of Forward Fitness">
+                    <img src="../images/home/fitness-group.jpg" alt="group of smiling people with fitness equipment" class="img-responsive">
+                    <h3>Group Fitness</h3>
+                </a>
+                <a href="nutrition.html" title="links to Nutrition page of Forward Fitness">
+                    <img src="../images/home/food-heart.jpg" alt="collection of food arranged in the shape of a heart" class="img-responsive">
+                    <h3>Meal Plans</h3>
+                </a>
+                <a href="about-us.html" title="links to About Us page of Forward Fitness">
+                    <img src="../images/home/personal-trainer.jpg" alt="smiling man holding a clipboard" class="img-responsive">
+                    <h3>Start Today</h3>
+                </a>
+            </div>
+
+        </section>
+    </div>
+    <footer>
+        <p>
+            &copy; Copyright 2024
+        </p>
+        <p>
+            <em>"This fictitious website was created as an academic exercise for the Diablo Valley College course, ARTDM-171:Web Design I. In no way should this content be considered or used as a source of factual public information."</em>
+        </p>
+    </footer>
+</body>
+</html>
